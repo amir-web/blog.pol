@@ -21,5 +21,9 @@ Route::group(['namespace' => 'Blog', 'prefix' => 'blog'], function ()
         ->names('blog.posts');
 });
 
-Route::resource('rest', 'RestTestController')
-    ->names('restTest');
+/*Route::resource('rest', 'RestTestController')
+    ->names('restTest');*/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
